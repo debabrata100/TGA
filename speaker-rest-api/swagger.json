@@ -1,0 +1,176 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "training_lab_rest_api",
+        "version": "1.0.0",
+        "title": "academy_speakers_rest_api",
+        "termsOfService": "",
+        "contact": {
+            "email": "nagcloudlab@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "host": "localhost:3000",
+    "basePath": "/api/v1",
+    "tags": [
+        {
+            "name": "speakers",
+            "description": "Everything about speakers",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/speakers": {
+            "get": {
+                "tags": [
+                    "speakers"
+                ],
+                "summary": "query all speakers",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Speaker"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "speakers"
+                ],
+                "summary": "Create a new Speaker",
+                "description": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "speaker",
+                        "description": "Speaker object",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Speaker"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Speaker"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/speakers/{id}": {
+            "patch": {
+                "tags": [
+                    "speakers"
+                ],
+                "summary": "Update a speaker",
+                "description": "Update a speaker's information by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of speaker to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Updated speaker information",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Speaker"
+                            }
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "speakers"
+                ],
+                "summary": "delete a speaker",
+                "description": "Delete a speaker by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of speaker to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Speaker deleted successfully"
+                    },
+                    "400": {
+                        "description": "Invalid request parameters"
+                    },
+                    "404": {
+                        "description": "Speaker not found"
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Speaker": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "bio": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
