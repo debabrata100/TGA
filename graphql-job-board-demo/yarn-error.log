@@ -1,0 +1,49 @@
+Arguments: 
+  /Users/debnayak/.nvm/versions/node/v16.18.0/bin/node /usr/local/bin/yarn add fakebase graphql apollo-server-express express express-jwt json-webtoken cors
+
+PATH: 
+  /Users/debnayak/Public/my-scripts:/Users/debnayak/.nvm/versions/node/v16.18.0/bin:/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/bin:/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/Library/Apple/usr/bin:/Users/debnayak/Public/my-scripts:/Users/debnayak/.nvm/versions/node/v16.18.0/bin:/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/bin:/Users/debnayak/Library/Android/Sdk/emulator:/Users/debnayak/Library/Android/Sdk/tools:/Users/debnayak/Library/Android/Sdk/tools/bin:/Users/debnayak/Library/Android/Sdk/platform-tools:/Users/debnayak/Library/Android/sdk/emulator:/Users/debnayak/Library/Android/sdk/platform-tools:/Users/debnayak/Library/Android/sdk/tools:/Users/debnayak/Library/Android/sdk/tools/bin:/Users/debnayak/Library/Android/Sdk/emulator:/Users/debnayak/Library/Android/Sdk/tools:/Users/debnayak/Library/Android/Sdk/tools/bin:/Users/debnayak/Library/Android/Sdk/platform-tools:/Users/debnayak/Library/Android/sdk/emulator:/Users/debnayak/Library/Android/sdk/platform-tools:/Users/debnayak/Library/Android/sdk/tools:/Users/debnayak/Library/Android/sdk/tools/bin:/Users/debnayak/Library/Android/sdk/emulator:/Users/debnayak/Library/Android/sdk/platform-tools:/Users/debnayak/Library/Android/sdk/tools:/Users/debnayak/Library/Android/sdk/tools/bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  16.18.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/json-webtoken: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66992:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140763:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141735:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141657:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1358:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "graphql-job-board-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "Debabrata",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
