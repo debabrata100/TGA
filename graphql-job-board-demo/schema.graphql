@@ -16,3 +16,27 @@ type Company {
   name: String!
   description: String
 }
+
+type Mutation {
+  addCompany(input: CreateCompanyInput): Company!
+  deleteCompany(id: ID!): Company!
+  addJob(input: CreateJobInput): Job
+  deleteJob(id: ID!): Job
+}
+
+input CreateCompanyInput {
+  name: String!
+  description: String
+}
+input CreateJobInput {
+  companyId: String!
+  title: String!
+  description: String
+}
+
+type Subscription {
+  jobAdded: Job
+  companyAdded: Company
+  companyRemoved: Company
+  jobRemoved: Job
+}
