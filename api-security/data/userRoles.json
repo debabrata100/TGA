@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "CREATE_ROLES",
+    "roles": [
+      "admin"
+    ]
+  },
+  {
+    "id": "1c8-qPFgTTGYF5Qjy_0Uj",
+    "title": "CREATE_NOTE",
+    "roles": [
+      "admin",
+      "teacher"
+    ]
+  },
+  {
+    "id": "BcwGubdc9rNMyYkFUVeik",
+    "roles": [
+      "admin",
+      "teacher",
+      "student"
+    ]
+  },
+  {
+    "id": "zEuxRe42qrZ7p-YG5b66O",
+    "title": "DELETE_NOTE",
+    "roles": [
+      "admin",
+      "teacher"
+    ]
+  }
+]

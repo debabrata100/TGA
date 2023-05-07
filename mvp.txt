@@ -1,0 +1,19 @@
+Create an insurance aggregation system: MVP
+• Login
+• Aggregate policies
+• Browse policies by type
+• Payment
+• Recommendations of policy
+
+Aggregate Policies:
+- Health Insurance
+	- Employee Plan
+	- Family Plan
+	- Individual Plan
+- Life Insurance
+	- Term Life Insurance
+	- Spouse Plan
+	- Return of Premium
+	- Saral Jeevan Bima
+- Home Insurance
+- Travel Insurance

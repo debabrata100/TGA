@@ -1,0 +1,20 @@
+<!-- payment.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment Form</title>
+  </head>
+  <body>
+    <h1>Payment Form</h1>
+    <form action="/secure/payment" method="POST">
+      <!-- Include the CSRF token -->
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+
+      <!-- Form fields go here -->
+      <label for="amount">Amount:</label>
+      <input type="number" name="amount" required />
+      <br />
+      <button type="submit">Submit Payment</button>
+    </form>
+  </body>
+</html>

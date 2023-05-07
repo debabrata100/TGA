@@ -1,0 +1,22 @@
+[
+  {
+    "id": "OZtHsWFjTuAP4krTkGm9s",
+    "title": "Javascript Datatypes",
+    "description": "There are 6 basic data types"
+  },
+  {
+    "id": "Uqi__lap5bi1T_NfVN69J",
+    "title": "Javascript Class",
+    "description": "Class is a syntactic sugar in Javascript. Javascript use function under the hood and works on prototype inheritance"
+  },
+  {
+    "id": "U-SpxncYo5GsYlO4_Ii6Q",
+    "title": "Javascript Object",
+    "description": "Class is a syntactic sugar in Javascript. Javascript use function under the hood and works on prototype inheritance"
+  },
+  {
+    "id": "dxCOSdP8CF6d-GAL2iVVt",
+    "title": "Javascript Object",
+    "description": "Class is a syntactic sugar in Javascript. Javascript use function under the hood and works on prototype inheritance"
+  }
+]
