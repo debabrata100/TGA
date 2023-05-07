@@ -1,0 +1,5 @@
+{
+    "googleClientId": "339272740947-b5src7uma5e32jthqvob16eq6ad7lf79.apps.googleusercontent.com",
+    "googleClientSecret": "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",
+    "googleOAuthRedirectUri": "http://localhost:5001/api/v1/oauth/google"
+}

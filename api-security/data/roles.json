@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "CREATE_ROLE"
+  },
+  {
+    "id": "e5eI5BiZw-N0iKyqdilhh",
+    "title": "CREATE_NOTE"
+  },
+  {
+    "id": "aeyYfHf8Fm-BXTU8wGRWf",
+    "title": "CREATE_NOTE"
+  },
+  {
+    "id": "6O9Wk_gJ8hdAkM-MQXggv",
+    "title": "READ_NOTE"
+  },
+  {
+    "id": "66NJQELi0GQL8u1PQGqq8",
+    "title": "DELETE_NOTE"
+  },
+  {
+    "id": "ZeNZdAy1hlNPsdU6YVFAG",
+    "title": "DELETE_NOTE"
+  }
+]

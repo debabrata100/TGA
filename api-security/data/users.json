@@ -1,0 +1,41 @@
+[
+  {
+    "id": "C53p636mzaYSyFOoiZ9gH",
+    "firstName": "Deb",
+    "lastName": "Nayak",
+    "email": "admin@yopmail.com",
+    "password": "$2b$10$qGEiDVEUEtfYdgJYBAweLOBU2ZgsDaLMiy/BnOxn8/5FrCIkGwoGW",
+    "role": "admin"
+  },
+  {
+    "id": "qF0si-5_0zn-WRRAfSmbM",
+    "firstName": "Deb",
+    "lastName": "Nayak",
+    "email": "deb@yopmail.com",
+    "password": "$2b$10$7a/HSChyph0qxPUObPfRBeU2p1x1Aap2RqZXV66PPOSNM02tAJzHW",
+    "role": "teacher"
+  },
+  {
+    "id": "dSlGIuFCuK4dveIeus9gE",
+    "firstName": "Deb",
+    "lastName": "Nayak",
+    "email": "deb1@yopmail.com",
+    "password": "$2b$10$xsZJrf3Q2aqPs3IbNb2Ge.1JVMP9ZySnVDNxDQrAZVW.xnfRvvXuG",
+    "role": "student"
+  },
+  {
+    "id": "OZ-7PlC2Q_apG2H-spBTt",
+    "firstName": "Deb",
+    "lastName": "Nayak",
+    "email": "deb3@yopmail.com",
+    "password": "$2b$10$sRdK4HC7ZP9wey2U0AE0QO.pxSKdsEyGngfJemEwGUHWq9owH.rHS",
+    "role": "student"
+  },
+  {
+    "id": "vYD-aNrft3po_ELB09VQM",
+    "firstName": "Debabrata",
+    "lastName": "Nayak",
+    "email": "debabrata.brata.nayak@gmail.com",
+    "role": "student"
+  }
+]
