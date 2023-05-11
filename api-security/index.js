@@ -9,6 +9,7 @@ const cookieParser = require("cookie-parser");
 const applyXssMiddleWare = require("./src/middlewares/xssMiddleware");
 const csurf = require("csurf");
 const applyLogger = require("./src/middlewares/logger");
+require("./src/services/redisClient");
 
 const PORT = 5001;
 
