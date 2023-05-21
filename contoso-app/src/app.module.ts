@@ -3,6 +3,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductModule } from './products/product.module';
+import { OrderModule } from './order/order.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -15,6 +17,8 @@ import { ProductModule } from './products/product.module';
       password: 'Pass@123',
       disableLosslessIntegers: true,
     }),
+    OrderModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
