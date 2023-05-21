@@ -1,30 +1,29 @@
-import { Neo4jService } from '@dbc-tech/nest-neo4j';
 import { Injectable } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
+import { ProductRepository } from './product.repository';
 
 @Injectable()
 export class ProductService {
-  constructor(private readonly neo4jService: Neo4jService) {
-    console.log('Product service contridtcd');
-  }
+  constructor(private readonly productRepo: ProductRepository) {}
 
   async addProduct(dto: CreateProductDto) {
     const id = Date.now().toString();
-    const result = await this.neo4jService.write(
-      `CREATE (p: Product {
-          id: $id, 
-          title: $title, 
-          price: $price, 
-          quantity: $quantity, 
-          outOfStock: $outOfStock }) RETURN p`,
-      { id, ...dto },
-    );
+    const query = `CREATE (p: Product {
+      id: $id, 
+      title: $title, 
+      price: $price, 
+      quantity: $quantity, 
+      outOfStock: $outOfStock }) RETURN p`;
+    const params = { id, ...dto };
+    const result = await this.productRepo.addNode(query, params);
+
     console.log(result);
     return id;
   }
   async getAllProduct() {
-    const results = await this.neo4jService.read(`MATCH (q:Product) RETURN q`);
-    console.log(results.records);
+    const query = `MATCH (q:Product) RETURN q`;
+    const results = await this.productRepo.getNode(query, {});
+    console.log('---', JSON.stringify(results.records));
     return results.records.map((r) => r.get('q').properties);
   }
 }
