@@ -1,4 +1,4 @@
-import { Job, Company } from "./db.js";
+import { Job, Company, Post, User } from "./db.js";
 import { PubSub } from "graphql-subscriptions";
 
 const pubSub = new PubSub();
@@ -6,6 +6,13 @@ const COMPANY_ADDED = "COMPANY_ADDED";
 const JOB_ADDED = "JOB_ADDED";
 const COMPANY_REMOVED = "COMPANY_REMOVED";
 const JOB_REMOVED = "JOB_REMOVED";
+
+const PostStatus = {
+  draft: "DRAFT",
+  published: "PUBLISHED",
+  inactive: "INACTIVE",
+  archived: "ARCHIVED",
+};
 
 export const resolvers = {
   Query: {
@@ -17,12 +24,22 @@ export const resolvers = {
       return Job.findAll();
     },
     companies: async () => Company.findAll(),
+    users: async () => User.findAll(),
+    posts: async () => Post.findAll(),
   },
   Job: {
-    company: async (job) => {
-      console.log(job);
-      return Company.findById(job.companyId);
+    company: async (job, args, cv, info) => {
+      const requestedFields = info.fieldNodes[0].selectionSet.selections.map(
+        (field) => field.name.value
+      );
+
+      // Log the requested fields
+      console.log("Requested fields:", requestedFields);
+      return await Company.findById(job.companyId);
     },
+  },
+  User: {
+    posts: async () => await Post.findAll(),
   },
   Mutation: {
     addCompany: async (_, { input }) => {
@@ -53,6 +70,19 @@ export const resolvers = {
       const job = await Job.delete(id);
       pubSub.publish(JOB_REMOVED, { jobRemoved: job });
       return job;
+    },
+    addPost: async (_, { input: { title, description } }) => {
+      const post = await Post.create({
+        title,
+        description,
+        createdAt: new Date().toDateString(),
+        status: PostStatus.draft,
+      });
+      return post;
+    },
+    updatePost: async (_, { id, status }) => {
+      const post = Post.update({ id, status });
+      return post;
     },
   },
   Subscription: {

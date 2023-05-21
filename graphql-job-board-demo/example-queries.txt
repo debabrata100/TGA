@@ -1,0 +1,78 @@
+
+fragment companyInfo on Company {
+  id
+  name
+  description
+}
+fragment jobInfo on Job {
+  id
+  title
+  description
+}
+
+# Fragment Example Getting Jobs with companyInfo and jobInfo
+query Jobs {
+  jobs{
+   ...jobInfo
+    company {
+      ...companyInfo
+    }
+  }
+}
+
+#Getting Job with Variables and aliases
+query getJob($jobId1: ID!, $jobId2: ID!) {
+  job1: job(id: $jobId1){
+    ...jobInfo
+  }
+  job2: job(id: $jobId2) {
+    ...jobInfo
+  }
+}
+
+# Getting Jobs with Directive
+
+fragment jobInfo on Job {
+  id @skip(if: $skipId)
+  title
+  description @include(if: $includeDesc)
+}
+
+query getJob($jobId1: ID!, $jobId2: ID!, $includeDesc: Boolean = true, $skipId: Boolean = false) {
+  job1: job(id: $jobId1){
+    ...jobInfo
+  }
+  job2: job(id: $jobId2) {
+    ...jobInfo
+  }
+}
+
+# Add Company Mutation
+mutation AddCompany($input: CreateCompanyInput) {
+  addCompany(input: $input) {
+    id
+    name
+    description
+  }
+}
+# Subscription: Company Added
+subscription CompanyAdded {
+  companyAdded {
+    id
+    name
+    description
+  }
+}
+
+# Concepts to cover
+* Introspection : https://graphql.org/learn/introspection/
+* useSubscription
+* useLink, useSplit split function
+* Feature of apollo server / Apollo client
+* Automatic cashing, batching
+* What is Apollo Server in GraphQl
+* Apollo federation
+* Graphql-ws and Libraries used for subscription
+* useMutation
+* What us the use of directive(option was annotating the filed with meta data)
+
