@@ -17,6 +17,7 @@ export class ProductsController {
     return this.productService.getAllProduct();
   }
 
+  @Post('updateQty')
   updateProductQty(@Body() body: UpdateProductQtyDto) {
     return 'dsd';
   }
