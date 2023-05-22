@@ -23,5 +23,10 @@
     "id": "pbymS_MOoVWJZ77Z_ynRx",
     "name": "Github",
     "description": "Provides a tool for versio control"
+  },
+  {
+    "id": "xnphRTO3_WzFyII-KLgYh",
+    "name": "GitHub",
+    "description": "Manages repos"
   }
 ]

@@ -17,3 +17,18 @@ Aggregate Policies:
 	- Saral Jeevan Bima
 - Home Insurance
 - Travel Insurance
+
+
+
+Software Requirements are as follows :-
+ 
+1. VSCode with ReactJS, NestJS code snippet and extensions
+2. Graphql extensions installed inside VSCode
+3. Neo4J Desktop latest version 
+4. MongoDB atlas cloud account (free tier)
+5. Postman 
+6. Docker with WSL installed 
+7. minikube latest version
+8. NodeJS latest installed
+ 
+Access to the internet required for connecting with Azure Services .
